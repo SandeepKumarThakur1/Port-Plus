@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Port Plus — Port state control intelligence delivered in seconds." />
+  <title>Port Plus — Port State Control Intelligence</title>
+
+  <!-- Tailwind utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#ff3b2f', ink: '#111111', paper: '#f7f7f5' },
+          fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-links nav-left">
+        <a href="#insights">Features</a>
+        <a href="#data">Pricing</a>
+      </div>
+      <a class="brand" href="#" aria-label="Port Plus home">PORT<span>PLUS</span></a>
+      <div class="nav-links nav-right">
+        <a href="#film">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="#insights">Features</a>
+      <a href="#data">Pricing</a>
+      <a href="#film">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-inner">
+        <h1>Port State Control<br><span>Intelligence</span><br>Delivered in Seconds.</h1>
+        <a class="scroll-cue" href="#film" aria-label="Scroll to see more"><span>↓</span></a>
+        <p class="hero-note">Every Port State inspection has a pattern. We try to decode it.<br>
+          Know how each port behaves for port state inspections. Know the probable findings.<br>
+          Powered by machine learning.</p>
+      </div>
+    </section>
+
+    <section class="film-section" id="film">
+      <div class="film-stage">
+        <div class="film-frame">
+          <video id="scrubVideo" muted playsinline preload="auto" poster="assets/images/port-video-poster.jpg">
+            <source src="assets/videos/portplus-reel.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="film-progress">
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="insights-section section-pad  bg-[#FCFAF8]" id="insights">
+      <div class="section-heading">
+        <h2>Four insights.<br>One platform.</h2>
+        <p>Actionable intelligence to help you prepare,<br class="desktop-only"> plan and reduce inspection risks.</p>
+      </div>
+      </div>
+      <div class="insight-grid">
+        <a class="insight-card" href="#contact"><span class="line-icon">▥</span>
+          <div>
+            <h3>Port Stringency Index</h3>
+            <p>A live strictness rating for every port — how hard the Port State Control inspection generally is.</p>
+          </div><span class="arrow">↗</span>
+        </a>
+        <a class="insight-card" href="#contact"><span class="line-icon">▤</span>
+          <div>
+            <h3>Most Likely Findings</h3>
+            <p>The deficiencies this vessel is most likely to be written up for at this destination.</p>
+          </div><span class="arrow">↗</span>
+        </a>
+        <a class="insight-card" href="#contact"><span class="line-icon">♧</span>
+          <div>
+            <h3>Ship PSC Score Card</h3>
+            <p>The vessel’s full performance scoring and risk analysis across the various PSC regimes.</p>
+          </div><span class="arrow">↗</span>
+        </a>
+        <a class="insight-card" href="#contact"><span class="line-icon">♙</span>
+          <div>
+            <h3>Operator PSC Score Card</h3>
+            <p>Fleet level performance score card and risk analysis across the various PSC regimes.</p>
+          </div><span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="steps-section section-pad">
+      <div class="steps-top"><span class="eyebrow"><i></i> HOW IT WORKS</span>
+        <p>No complex software. No bloat.<br>Just the exact answers you need,<br>in under 10 seconds.</p>
+      </div>
+      <h2>Get insights in <span>3 simple</span> steps.</h2>
+      <div class="steps-track">
+        <svg class="steps-wave" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+          <path class="wave-base"
+            d="M8 52 C95 52 115 52 180 52 C270 52 285 5 390 5 C490 5 520 88 620 52 C720 16 760 15 850 52 C945 88 1010 52 1192 52" />
+          <path class="wave-flow"
+            d="M8 52 C95 52 115 52 180 52 C270 52 285 5 390 5 C490 5 520 88 620 52 C720 16 760 15 850 52 C945 88 1010 52 1192 52" />
+          <circle class="wave-orb" r="4">
+            <animateMotion dur="8s" repeatCount="indefinite"
+              path="M8 52 C95 52 115 52 180 52 C270 52 285 5 390 5 C490 5 520 88 620 52 C720 16 760 15 850 52 C945 88 1010 52 1192 52" />
+          </circle>
+          <circle class="wave-end" cx="8" cy="52" r="4" />
+          <circle class="wave-end" cx="1192" cy="52" r="4" />
+        </svg>
+        <article class="step"><span class="step-number">01</span>
+          <div class="step-icon">⌘</div>
+          <h3>Connect</h3>
+          <p>Open the web browser on your desktop, or add the bot on Telegram (no complex software installation
+            required).</p>
+        </article>
+        <article class="step"><span class="step-number">02</span>
+          <div class="step-icon">▤</div>
+          <h3>Input</h3>
+          <p>Drop an IMO number &amp; destination port.</p>
+        </article>
+        <article class="step"><span class="step-number">03</span>
+          <div class="step-icon">▥</div>
+          <h3>Prepare</h3>
+          <p>Get insights directly to your device.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="data-section section-pad" id="data">
+
+      <div class="data-copy">
+        <span class="eyebrow"><i></i> OUR DATA</span>
+
+        <h2>Built on real data.<br>
+          <span>Trusted worldwide.</span>
+        </h2>
+
+        <p>
+          Our models analyse years of global PSC inspection records to
+          give you accurate, data-driven insights.
+        </p>
+
+        <div class="stats">
+          <div>
+            <strong>2.5M+</strong>
+            <small>INSPECTION RECORDS<br>ANALYSED</small>
+          </div>
+
+          <div>
+            <strong>1,200+</strong>
+            <small>PORTS COVERED<br>WORLDWIDE</small>
+          </div>
+
+          <div>
+            <strong>10 sec</strong>
+            <small>TIME TO DELIVER<br>INSIGHTS</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-visual" role="img" aria-label="Cargo ship at sea">
+
+        <div class="map-dots"></div>
+
+        <div class="data-orbit">
+          <span class="orbit-dot dot-one"></span>
+          <span class="orbit-dot dot-two"></span>
+          <span class="orbit-dot dot-three"></span>
+          <span class="orbit-dot dot-four"></span>
+          <span class="orbit-dot dot-five"></span>
+        </div>
+
+        <div class="ship-shape">
+          ▰<br>▰<br>▰
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer class="site-footer" id="contact">
+
+      <div class="footer-main">
+
+        <div class="footer-brand-column">
+          <a class="footer-logo" href="#">
+            PORT<span>PLUS</span>
+          </a>
+
+          <p>
+            Smarter port state control intelligence.
+            Prepare better. Navigate inspections with confidence.
+          </p>
+
+          <a href="mailto:hello@portplus.com" class="footer-email">
+            Get in touch <span>↗</span>
+          </a>
+        </div>
+
+        <div class="footer-links-column">
+          <span class="footer-label">EXPLORE</span>
+
+          <a href="#insights">Features</a>
+          <a href="#data">Our Data</a>
+          <a href="#film">Platform</a>
+        </div>
+
+        <div class="footer-links-column">
+          <span class="footer-label">COMPANY</span>
+
+          <a href="#contact">Contact</a>
+          <a href="#contact">About</a>
+        </div>
+
+        <div class="footer-cta">
+          <span class="footer-label">PORT PLUS INTELLIGENCE</span>
+
+          <h2>
+            Know the port.<br>
+            <span>Prepare better.</span>
+          </h2>
+
+          <a href="mailto:hello@portplus.com" class="footer-cta-link">
+            Let's talk <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>© 2026 PORT PLUS. ALL RIGHTS RESERVED.</span>
+
+        <a href="#" class="footer-back-top">
+          BACK TO TOP <span>↑</span>
+        </a>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
