@@ -567,10 +567,10 @@ a {
     display: grid;
     place-items: center;
 
-    background: radial-gradient(ellipse at 55% 55%,
+    /* background: radial-gradient(ellipse at 55% 55%,
             #d8e0dc 0,
             #eef0ed 38%,
-            transparent 70%);
+            transparent 70%); */
 }
 
 .map-dots {
@@ -1526,14 +1526,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-
+/* 
     overflow: hidden;
 
     background:
         radial-gradient(ellipse at 55% 55%,
             #e7ebea 0%,
             #f5f6f5 43%,
-            #fff 75%);
+            #fff 75%); */
 }
 
 /* Dotted world map */
@@ -2082,489 +2082,875 @@ a {
 
 
 /* =====================================================
-   PORT PLUS — FEATURE PAGE
-   Port Stringency Score
+   PORT PLUS — FEATURE PAGE IMPROVEMENTS
 ===================================================== */
 
-/* PAGE TITLE */
-.feature-title {
-    min-height: 250px;
-    padding: 55px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.feature-page-body {
     background: #fff;
+    overflow-x: hidden;
 }
 
-.feature-title h1 {
-    margin: 0;
-    font-size: clamp(38px, 4.5vw, 44px);
-    font-weight: 500;
-    line-height: 1.08;
-    letter-spacing: -1.8px; 
-    text-align: center;
-}
-
-/* MAIN FEATURE BACKGROUND */
-.feature-story {
-    position: relative;
-    isolation: isolate;
+.feature-page {
     width: 100%;
-    min-height: 1450px;
     overflow: hidden;
-    /* background-color: #061725; */
-    background-image: url("../assets/images/featureBg.svg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
 }
+
+.feature-page .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.feature-page .nav-try {
+    padding: 8px 22px;
+    border-radius: 30px;
+    background: #e8e8e8;
+    color: #111;
+}
+
 
 /* =====================================================
-   TOP SECTION — SAME SHIP, DIFFERENT PORTS
+   TITLE SECTION
 ===================================================== */
 
-.feature-simple {
+.feature-page .feature-title {
+    min-height: 470px;
+    padding: 145px 6% 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background:
+        radial-gradient(ellipse at 50% 100%, #f2f6f8 0%, transparent 60%),
+        #fff;
+}
+
+.title-overline {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #929da5;
+    margin-bottom: 20px;
+}
+
+.feature-page .feature-title h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 600;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin: 0;
+}
+
+.feature-page .feature-title > p {
+    margin: 22px 0 0;
+    font-size: 14px;
+    color: #7b858d;
+    line-height: 1.6;
+}
+
+.title-scroll {
+    position: absolute;
+    bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #929da5;
+}
+
+.title-scroll i {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dce3e7;
+    border-radius: 50%;
+    font-size: 16px;
+    font-style: normal;
+    color: #ff3c1e;
+    animation: featureArrow 1.8s ease-in-out infinite;
+}
+
+@keyframes featureArrow {
+    50% { transform: translateY(6px); }
+}
+
+
+/* =====================================================
+   SIMPLE EXPLANATION
+===================================================== */
+
+.feature-page .feature-simple {
     position: relative;
     z-index: 2;
-    width: 100%;
-    height: 450px;
-    min-height: 450px;
-    padding: 48px 5.6% 0;
+    min-height: 500px;
+    height: auto;
+    padding: 80px 6.5% 95px;
+    background:
+        radial-gradient(ellipse at 80% 50%, #f2f7fa 0%, transparent 45%),
+        #fff;
+}
 
+.simple-inner {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 42% minmax(0, 1fr);
-    column-gap: 4%;
-    align-items: start;
+    grid-template-columns: 44% 56%;
+    align-items: center;
+    gap: 0;
 }
 
 .feature-simple-copy {
-    width: 100%;
-    max-width: 440px;
+    max-width: 490px;
+    position: relative;
+    z-index: 3;
+}
+
+.feature-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #75818a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.feature-eyebrow i {
+    width: 24px;
+    height: 2px;
+    background: #ff3c1e;
+    display: inline-block;
 }
 
 .feature-simple-copy h2 {
-    margin: 17px 0 14px;
-    font-size: clamp(35px, 3.8vw, 42px);
+    margin: 22px 0 22px;
+    font-size: clamp(38px, 4.2vw, 58px);
     line-height: 1.02;
-    letter-spacing: -1.7px;
+    letter-spacing: -2.5px;
     font-weight: 700;
+    color: #101820;
 }
 
-.feature-simple-copy h2 span {
-    color: var(--accent);
+.feature-simple-copy h2 span,
+.calculation-copy h2 span {
+    color: #ff4b2e;
 }
 
 .feature-simple-copy p {
-    max-width: 410px;
-    margin: 0 0 13px;
-    color: #6d7880;
-    font-size: 13px;
-    line-height: 1.4;
+    max-width: 440px;
+    margin: 0 0 15px;
+    color: #73808a;
+    font-size: 14px;
+    line-height: 1.55;
 }
 
-/* PORT COMPARISON CARDS */
-.port-comparison {
-    position: relative;
-    z-index: 4;
-    justify-self: start;
-    align-self: start;
+.feature-simple-copy strong {
+    color: #ff4b2e;
+}
 
+
+/* =====================================================
+   PORT COMPARISON CARDS
+===================================================== */
+
+.feature-page .port-comparison {
+    position: relative;
+    width: 100%;
+    max-width: 570px;
+    justify-self: end;
+    align-self: center;
+    margin: 45px 0 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-
-    width: 100%;
-    max-width: 370px;
-    margin-top: 145px;
+    gap: 24px;
 }
 
-.port-card {
-    width: 100%;
-    min-height: 130px;
-    padding: 15px 17px;
-
+.feature-page .port-card {
+    min-height: 175px;
+    padding: 22px 24px;
     border: 1px solid #e8edf0;
-    border-radius: 12px;
-    background: rgba(255,255,255,.94);
-
-    box-shadow: 0 5px 22px rgba(17,39,54,.09);
+    border-radius: 15px;
+    background: rgba(255,255,255,.9);
+    box-shadow:
+        0 12px 35px rgba(17,39,54,.06),
+        0 2px 6px rgba(17,39,54,.03);
+    text-align: center;
+    transition: transform .4s ease, box-shadow .4s ease;
 }
 
-.port-card-heading {
+.feature-page .port-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(17,39,54,.1);
+}
+
+.feature-page .port-card-heading {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 12px;
     font-size: 14px;
+    font-weight: 600;
+    color: #27333c;
 }
 
-.port-pin {
-    color: var(--accent);
-    font-size: 25px;
+.feature-page .port-pin {
+    font-size: 26px;
+    color: #ff4b2e;
 }
 
-.port-score {
-    color: var(--accent);
-    font-size: 39px;
+.port-card-divider {
+    height: 1px;
+    background: #e9eef1;
+    margin: 18px 0 10px;
 }
 
-.port-description {
-    font-size: 10px;
+.feature-page .port-score {
+    display: block;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    color: #ff4b2e;
 }
 
-/* PORT CARD CONNECTOR LINES */
-.port-connectors {
+.feature-page .port-description {
+    display: block;
+    margin-top: 9px;
+    color: #89939a;
+    font-size: 11px;
+}
+
+.feature-page .port-connectors {
     position: absolute;
-    z-index: 1;
-    top: 120px;
+    top: 145px;
     left: 0;
-
     width: 100%;
-    height: 240px;
-
+    height: 250px;
     overflow: visible;
     pointer-events: none;
 }
 
-.port-connector {
+.feature-page .port-connectors path {
     fill: none;
-    stroke: var(--accent);
-    stroke-width: 1.3;
-    stroke-dasharray: 4 4;
+    stroke: #ff593d;
+    stroke-width: 1.5;
+    stroke-dasharray: 5 5;
 }
 
-.connector-end {
-    fill: var(--accent);
+.feature-page .port-connectors circle {
+    fill: #ff593d;
+    stroke: white;
+    stroke-width: 2;
 }
+
 
 /* =====================================================
-   UNDERWATER SECTION
+   UNDERWATER / CALCULATION SECTION
 ===================================================== */
 
-.feature-calculation {
+.feature-page .feature-calculation {
     position: relative;
-    z-index: 2;
-
-    min-height: 1000px;
-    padding: 65px 5.6% 45px;
-
+    isolation: isolate;
+    min-height: 1250px;
+    padding: 105px 6.5% 85px;
     color: #fff;
-    overflow: visible;
+    overflow: hidden;
+    background: #00101d;
 }
 
-.calculation-content {
-    position: relative;
-    z-index: 4;
+/* Underwater image background */
+.underwater-background {
+    position: absolute;
+    z-index: -4;
+    inset: 0;
+    background-image:
+        linear-gradient(180deg, rgba(0,16,29,.05), rgba(0,8,17,.45)),
+        url("../assets/images/03_underwater_background.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: scale(1.04);
+}
 
+/* Moving blue light */
+.underwater-light {
+    position: absolute;
+    z-index: -2;
+    top: -10%;
+    right: -10%;
+    width: 75%;
+    height: 80%;
+    background:
+        radial-gradient(ellipse at center,
+        rgba(53,190,235,.2),
+        rgba(12,100,155,.08) 38%,
+        transparent 70%);
+    filter: blur(25px);
+    pointer-events: none;
+}
+
+.underwater-particles {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: .23;
+    pointer-events: none;
+    background-image: radial-gradient(#a7e8ff 1px, transparent 1.5px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, transparent, #000 25%, #000);
+}
+
+
+/* =====================================================
+   ICEBERG VISUAL
+===================================================== */
+
+.iceberg-scene {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 66%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.iceberg-top {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
     width: 100%;
-    max-width: 1200px;
+    height: 245px;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.iceberg-top img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.iceberg-waterline {
+    position: absolute;
+    z-index: 4;
+    top: 225px;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.iceberg-waterline img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.iceberg-underwater {
+    position: absolute;
+    z-index: 2;
+    top: 270px;
+    right: 4%;
+    width: 76%;
+    height: 660px;
+    will-change: transform;
+}
+
+.iceberg-underwater img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: top center;
+    filter: drop-shadow(0 20px 45px rgba(0,130,200,.18));
+}
+
+.iceberg-glow {
+    position: absolute;
+    z-index: 1;
+    top: 260px;
+    right: 0;
+    width: 75%;
+    height: 650px;
+    background: radial-gradient(ellipse, rgba(0,190,255,.16), transparent 68%);
+    filter: blur(35px);
+    opacity: .45;
+}
+
+.iceberg-points {
+    position: absolute;
+    z-index: 5;
+    top: 400px;
+    right: 20%;
+    width: 25%;
+    height: 450px;
+}
+
+.ice-point {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #ff4b2e;
+    border: 2px solid white;
+    box-shadow: 0 0 0 7px rgba(255,75,46,.13);
+    animation: pointPulse 2s ease-in-out infinite;
+}
+
+.point-one { top: 12%; left: 45%; }
+.point-two { top: 48%; left: 38%; animation-delay: .4s; }
+.point-three { top: 82%; left: 55%; animation-delay: .8s; }
+
+@keyframes pointPulse {
+    50% {
+        box-shadow: 0 0 0 13px rgba(255,75,46,0);
+    }
+}
+
+.feature-page .iceberg-connectors {
+    position: absolute;
+    z-index: 6;
+    top: 365px;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.feature-page .ice-line {
+    fill: none;
+    stroke: #ff4b2e;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+}
+
+.feature-page .ice-marker {
+    fill: #ff4b2e;
+    stroke: white;
+    stroke-width: 2;
+}
+
+
+/* =====================================================
+   CALCULATION CONTENT
+===================================================== */
+
+.feature-page .calculation-content {
+    position: relative;
+    z-index: 8;
+    width: 100%;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
-/* HEADING AND INTRO */
-.calculation-copy {
+.feature-page .calculation-copy {
+    max-width: 480px;
     position: relative;
-    z-index: 4;
-    max-width: 430px;
+    z-index: 8;
 }
 
-.calculation-copy h2 {
-    margin: 17px 0 13px;
-    font-size: clamp(34px, 3.8vw, 42px);
-    line-height: 1.04;
-    letter-spacing: -1.7px;
+.light-eyebrow {
+    color: #b9c9d2;
 }
 
-.calculation-copy h2 span {
-    color: var(--accent);
+.feature-page .calculation-copy h2 {
+    margin: 22px 0 17px;
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -2.2px;
+    font-weight: 700;
+    color: #fff;
 }
 
-.calculation-intro {
-    max-width: 410px;
-    color: #c1cbd1;
-    font-size: 13px;
-    line-height: 1.45;
+.feature-page .calculation-intro {
+    max-width: 420px;
+    color: #b7c8d2;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-/* THREE CALCULATION STEPS */
-.calculation-steps {
+
+/* =====================================================
+   CALCULATION STEPS
+===================================================== */
+
+.feature-page .calculation-steps {
     position: relative;
-    z-index: 4;
-
-    width: 410px;
-    max-width: 46%;
-    margin-top: 28px;
+    z-index: 8;
+    width: 490px;
+    max-width: 48%;
+    margin-top: 42px;
 }
 
-.calculation-step {
-    position: relative;
-
+.feature-page .calculation-step {
     display: grid;
-    grid-template-columns: 55px 28px minmax(0, 1fr);
+    grid-template-columns: 58px 30px minmax(0,1fr);
     gap: 14px;
     align-items: start;
-
-    padding-bottom: 16px;
-    margin-bottom: 5px;
+    padding: 0 0 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
-.calculation-icon {
-    width: 53px;
-    height: 53px;
+.feature-page .calculation-step:last-child {
+    border-bottom: 0;
 }
 
-.calculation-number {
-    padding-top: 10px;
-    font-size: 16px;
-}
-
-.calculation-step-copy {
-    padding: 8px 0 16px;
-}
-
-.calculation-step-copy h3 {
-    margin: 0 0 5px;
-    font-size: 14px;
-}
-
-.calculation-step-copy p {
-    margin: 0;
-    font-size: 12px;
-    line-height: 1.45;
-}
-
-/* =====================================================
-   ICEBERG POINTER LINES
-   Three individual horizontal pointers.
-===================================================== */
-
-.iceberg-connectors {
-    position: absolute;
-    z-index: 3;
-
-    top: 155px;
-    left: 40%;
-
-    width: 58%;
-    height: 650px;
-
-    overflow: visible;
-    pointer-events: none;
-}
-
-.iceberg-line {
-    fill: none;
-    stroke: var(--accent);
-    stroke-width: 1.5;
-    stroke-linecap: round;
-
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-}
-
-.iceberg-marker {
-    fill: var(--accent);
-    stroke: rgba(255,255,255,.9);
-    stroke-width: 2;
-
-    transform-box: fill-box;
-    transform-origin: center;
-}
-
-/* Keep text above pointer lines */
-.calculation-copy,
-.calculation-steps,
-.calculation-note {
-    position: relative;
-    z-index: 4;
-}
-
-/* =====================================================
-   BEYOND SIMPLE AVERAGES PANEL
-===================================================== */
-
-.calculation-note {
-    position: relative;
-    z-index: 4;
-
+.feature-page .calculation-icon {
+    width: 54px;
+    height: 54px;
     display: grid;
-    grid-template-columns: 52px minmax(0, 1fr);
-    align-items: start;
-    gap: 17px;
-
-    width: 720px;
-    max-width: 65%;
-
-    margin-top: 20px;
-    padding: 19px;
-
-    border: 1px solid rgba(180,215,235,.2);
-    border-radius: 12px;
-
-    background: rgba(8,29,42,.85);
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.1);
+    color: #d6e8f1;
+    font-size: 24px;
+    transition: background .35s ease, transform .35s ease;
 }
 
-.calculation-note-icon {
-    width: 48px;
-    height: 48px;
+.feature-page .calculation-step:hover .calculation-icon {
+    background: rgba(255,75,46,.2);
+    transform: translateY(-4px);
 }
 
-.calculation-note-copy {
-    padding-left: 17px;
-    border-left: 2px solid var(--accent);
+.feature-page .calculation-number {
+    padding-top: 9px;
+    color: #ff4b2e;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-.calculation-note-copy h3 {
-    margin: 0 0 6px;
-    font-size: 14px;
+.feature-page .calculation-step-copy {
+    padding-top: 7px;
 }
 
-.calculation-note-copy p {
+.feature-page .calculation-step-copy h3 {
+    margin: 0 0 7px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.feature-page .calculation-step-copy p {
     margin: 0;
+    color: #a9bdc9;
     font-size: 12px;
-    line-height: 1.45;
+    line-height: 1.6;
 }
+
 
 /* =====================================================
-   TABLET
+   BEYOND SIMPLE AVERAGES
+===================================================== */
+
+.feature-page .calculation-note {
+    position: relative;
+    z-index: 8;
+    width: 750px;
+    max-width: 72%;
+    margin-top: 30px;
+    padding: 23px;
+    display: grid;
+    grid-template-columns: 54px minmax(0,1fr);
+    gap: 20px;
+    align-items: start;
+    border: 1px solid rgba(174,218,240,.2);
+    border-radius: 14px;
+    background: rgba(4,23,37,.82);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 45px rgba(0,0,0,.15);
+}
+
+.feature-page .calculation-note-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: rgba(255,255,255,.09);
+    color: #fff;
+    font-size: 24px;
+}
+
+.feature-page .calculation-note-copy {
+    padding-left: 18px;
+    border-left: 2px solid #ff4b2e;
+}
+
+.feature-page .calculation-note-copy h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.feature-page .calculation-note-copy p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #afc0ca;
+}
+
+.underwater-caption {
+    position: absolute;
+    z-index: 8;
+    right: 6.5%;
+    bottom: 32px;
+    display: flex;
+    gap: 25px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: rgba(205,229,240,.55);
+}
+
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
+
+.feature-page .feature-reveal {
+    will-change: transform, opacity;
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
 ===================================================== */
 
 @media (max-width: 950px) {
 
-    .feature-simple {
-        grid-template-columns: 44% minmax(0, 1fr);
-        column-gap: 3%;
+    .feature-page .feature-title {
+        min-height: 400px;
+    }
+
+    .simple-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .feature-page .feature-simple {
         padding-left: 5%;
         padding-right: 5%;
     }
 
-    .port-comparison {
+    .feature-page .port-comparison {
         gap: 12px;
     }
 
-    .calculation-steps {
-        max-width: 49%;
+    .feature-page .port-card {
+        padding: 18px 14px;
     }
 
-    .calculation-note {
-        max-width: 70%;
+    .iceberg-scene {
+        width: 62%;
+        opacity: .8;
     }
 
-    .iceberg-connectors {
-        left: 43%;
-        width: 54%;
+    .feature-page .calculation-steps {
+        max-width: 52%;
+    }
+
+    .feature-page .calculation-note {
+        max-width: 68%;
     }
 }
 
+
 /* =====================================================
-   MOBILE
+   RESPONSIVE — MOBILE
 ===================================================== */
 
 @media (max-width: 700px) {
 
-    .feature-title {
-        min-height: 170px;
-        padding: 35px 7%;
+    .feature-page .feature-title {
+        min-height: 360px;
+        padding: 120px 7% 70px;
     }
 
-    .feature-story {
-        min-height: auto;
-        background-size: auto 100%;
-        background-position: center top;
+    .feature-page .feature-title h1 {
+        font-size: clamp(38px, 10vw, 48px);
+        letter-spacing: -2px;
     }
 
-    .feature-simple {
-        height: auto;
-        min-height: 0;
-
-        display: flex;
-        flex-direction: column;
-
-        padding: 45px 7% 55px;
-    }
-
-    .feature-simple-copy {
-        max-width: 100%;
-    }
-
-    .feature-simple-copy h2 {
-        font-size: 35px;
-    }
-
-    .feature-simple-copy p {
+    .feature-page .feature-title > p {
+        max-width: 300px;
         font-size: 12px;
     }
 
-    .port-comparison {
-        width: 100%;
-        max-width: 390px;
-        margin: 30px auto 0;
+    .title-scroll {
+        bottom: 22px;
+    }
+
+    .feature-page .feature-simple {
+        min-height: 0;
+        padding: 65px 7% 75px;
+    }
+
+    .simple-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feature-simple-copy h2 {
+        font-size: clamp(38px, 10vw, 48px);
+    }
+
+    .feature-simple-copy p {
+        font-size: 13px;
+    }
+
+    .feature-page .port-comparison {
+        max-width: 100%;
+        margin: 10px 0 0;
         gap: 12px;
     }
 
-    .port-card {
-        min-height: 120px;
+    .feature-page .port-card {
+        min-height: 145px;
+        padding: 17px 12px;
     }
 
-    .port-connectors {
+    .feature-page .port-score {
+        font-size: 40px;
+    }
+
+    .feature-page .port-connectors {
         display: none;
     }
 
-    .feature-calculation {
+    .feature-page .feature-calculation {
         min-height: 0;
-        padding: 60px 7% 40px;
+        padding: 70px 7% 75px;
     }
 
-    .calculation-copy {
+    .iceberg-scene {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 600px;
+        opacity: .65;
+    }
+
+    .iceberg-top {
+        height: 150px;
+    }
+
+    .iceberg-waterline {
+        top: 140px;
+        height: 40px;
+    }
+
+    .iceberg-underwater {
+        top: 175px;
+        right: 0;
+        width: 100%;
+        height: 380px;
+    }
+
+    .iceberg-glow {
+        top: 170px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .iceberg-points,
+    .feature-page .iceberg-connectors {
+        display: none;
+    }
+
+    .feature-page .calculation-copy {
         max-width: 100%;
     }
 
-    .calculation-copy h2 {
-        font-size: 34px;
+    .feature-page .calculation-copy h2 {
+        font-size: clamp(36px, 9vw, 44px);
     }
 
-    .calculation-steps {
+    .feature-page .calculation-intro {
+        font-size: 13px;
+    }
+
+    .feature-page .calculation-steps {
         width: 100%;
         max-width: 100%;
+        margin-top: 35px;
     }
 
-    .calculation-step {
-        grid-template-columns: 45px 24px minmax(0, 1fr);
+    .feature-page .calculation-step {
+        grid-template-columns: 45px 25px minmax(0,1fr);
         gap: 9px;
     }
 
-    .calculation-icon {
+    .feature-page .calculation-icon {
         width: 43px;
         height: 43px;
+        font-size: 20px;
     }
 
-    .calculation-steps::before {
-        left: 21px;
+    .feature-page .calculation-step-copy h3 {
+        font-size: 14px;
     }
 
-    .calculation-note {
+    .feature-page .calculation-step-copy p {
+        font-size: 11px;
+    }
+
+    .feature-page .calculation-note {
         width: 100%;
         max-width: 100%;
-        grid-template-columns: 40px minmax(0, 1fr);
-        gap: 10px;
-        padding: 14px;
+        grid-template-columns: 38px minmax(0,1fr);
+        gap: 12px;
+        padding: 15px;
+        margin-top: 25px;
     }
 
-    .calculation-note-icon {
+    .feature-page .calculation-note-icon {
         width: 38px;
         height: 38px;
+        font-size: 19px;
     }
 
-    .calculation-note-copy {
+    .feature-page .calculation-note-copy {
         padding-left: 12px;
     }
 
-    .calculation-note-copy p {
+    .feature-page .calculation-note-copy p {
         font-size: 10px;
     }
 
-    /* Hide iceberg pointers on narrow screens */
-    .iceberg-connectors {
+    .underwater-caption {
         display: none;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .feature-page *,
+    .feature-page *::before,
+    .feature-page *::after {
+        animation: none !important;
+        transition: none !important;
     }
 }

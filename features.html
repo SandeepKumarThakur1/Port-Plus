@@ -1,365 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Port Plus — Port state control intelligence delivered in seconds." />
-    <title>Port Plus — Port State Control Intelligence</title>
-
-    <!-- Tailwind utility classes -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { accent: '#ff3b2f', ink: '#111111', paper: '#f7f7f5' },
-                    fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Understand how Port Stringency Score measures port inspection behaviour.">
+    <title>Port Plus — Port Stringency Score</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css" />
+
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body class="bg-white text-ink antialiased">
-    <header class="site-header">
-        <nav class="nav-shell" aria-label="Main navigation">
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-            <div class="nav-links nav-left">
-                <a href="#insights">Features</a>
-                <a href="#data">Pricing</a>
-            </div>
-            <a class="brand" href="#" aria-label="Port Plus home">PORT<span>PLUS</span></a>
-            <div class="nav-links nav-right">
-                <a href="#film">Blog</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-        <div class="mobile-menu">
+<body class="feature-page-body">
+
+<header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+
+        <div class="nav-links nav-left">
             <a href="#insights">Features</a>
             <a href="#data">Pricing</a>
+        </div>
+
+        <a class="brand" href="#" aria-label="Port Plus home">
+            PORT<span>PLUS</span>
+        </a>
+
+        <div class="nav-links nav-right">
             <a href="#film">Blog</a>
             <a href="#contact">Contact</a>
+            <a href="#contact">Login</a>
+            <a class="nav-try" href="#contact">Try</a>
         </div>
-    </header>
+    </nav>
 
-    <main class="feature-page">
-        <section class="feature-title">
-            <h1>Port Stringency Score</h1>
-        </section>
+    <div class="mobile-menu">
+        <a href="#insights">Features</a>
+        <a href="#data">Pricing</a>
+        <a href="#film">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact">Login</a>
+    </div>
+</header>
 
-        <section class="feature-story">
+<main class="feature-page">
 
-            <!-- TOP: THE SIMPLE EXPLANATION -->
-            <div class="feature-simple">
-
-                <div class="feature-simple-copy">
-
-                    <span class="feature-eyebrow">
-                        <i></i> THE SIMPLE
-                    </span>
-
-                    <h2>
-                        Same ship.<br>
-                        <span>Different ports.</span><br>
-                        Different results.
-                    </h2>
-
-                    <p>
-                        Consider a ship that calls at two different ports.
-                        At the first port, it receives 2 deficiencies.
-                        At the second port, it receives 8.
-                    </p>
-
-                    <p>
-                        The ship was the same. The maintenance was the same.
-                        The crew was the same. The only variable that changed
-                        was the port.
-                    </p>
-
-                    <p>
-                        That difference is what the
-                        <strong>Port stringency score</strong> measures.
-                        It looks at how strictly each port behaves, giving
-                        you a clear, intuitive feel for how the local Port
-                        State Control regime will treat a ship like yours.
-                    </p>
-
-                </div>
+    <!-- PAGE TITLE -->
+    <section class="feature-title">
+        <span class="title-overline">PORT PLUS INTELLIGENCE</span>
+        <h1>Port Stringency Score</h1>
+        <p>Understand the difference between ports. Prepare for what comes next.</p>
+        <a href="#simple-section" class="title-scroll">
+            <span>SCROLL TO EXPLORE</span>
+            <i>↓</i>
+        </a>
+    </section>
 
 
-                <!-- PORT COMPARISON CARDS -->
-                <div class="port-comparison">
+    <!-- SIMPLE EXPLANATION -->
+    <section class="feature-simple" id="simple-section">
 
-                    <div class="port-card port-card-a">
+        <div class="simple-inner">
 
-                        <div class="port-card-heading">
-                            <span class="port-pin">⌖</span>
-                            <span>Port A</span>
-                        </div>
+            <div class="feature-simple-copy feature-reveal">
 
-                        <div class="port-card-divider"></div>
+                <span class="feature-eyebrow">
+                    <i></i> THE SIMPLE
+                </span>
 
-                        <strong class="port-score">2</strong>
-                        <span class="port-description">Deficiencies</span>
+                <h2>
+                    Same ship.<br>
+                    <span>Different ports.</span><br>
+                    Different results.
+                </h2>
 
-                    </div>
+                <p>
+                    Consider a ship that calls at two different ports.
+                    At the first port, it receives 2 deficiencies.
+                    At the second port, it receives 8.
+                </p>
 
+                <p>
+                    The ship was the same. The maintenance was the same.
+                    The crew was the same. The only variable that changed
+                    was the port.
+                </p>
 
-                    <div class="port-card port-card-b">
-
-                        <div class="port-card-heading">
-                            <span class="port-pin">⌖</span>
-                            <span>Port B</span>
-                        </div>
-
-                        <div class="port-card-divider"></div>
-
-                        <strong class="port-score">8</strong>
-                        <span class="port-description">Deficiencies</span>
-
-                    </div>
-
-
-                    <!-- CONNECTING LINES TO THE MOUNTAIN -->
-                    <svg class="port-connectors" viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true">
-
-                        <path class="port-connector connector-a" d="M 150 125 L 150 205 L 225 280" />
-
-                        <path class="port-connector connector-b" d="M 450 125 L 450 205 L 375 280" />
-
-                        <circle class="connector-end" cx="225" cy="280" r="5" />
-                        <circle class="connector-end" cx="375" cy="280" r="5" />
-
-                    </svg>
-
-                </div>
+                <p>
+                    That difference is what the
+                    <strong>Port stringency score</strong> measures.
+                    It looks at how strictly each port behaves, giving
+                    you a clear, intuitive feel for how the local Port
+                    State Control regime will treat a ship like yours.
+                </p>
 
             </div>
 
 
-            <!-- BOTTOM: HOW THE SCORE IS CALCULATED -->
-            <div class="feature-calculation">
+            <div class="port-comparison feature-reveal">
 
-                <div class="calculation-content">
-
-                    <div class="calculation-copy">
-
-                        <span class="feature-eyebrow light-eyebrow">
-                            <i></i> THE COMPLEX
-                        </span>
-
-                        <h2>
-                            How the<br>
-                            <span>Port stringency score</span><br>
-                            is calculated.
-                        </h2>
-
-                        <p class="calculation-intro">
-                            The logic begins with a simple question:<br>
-                            if the exact same ship calls at two different ports,
-                            how does each port's PSC regime behave?
-                        </p>
-
+                <div class="port-card">
+                    <div class="port-card-heading">
+                        <span class="port-pin">⌖</span>
+                        <span>Port A</span>
                     </div>
 
+                    <div class="port-card-divider"></div>
 
-                    <!-- CALCULATION STEPS -->
-                    <div class="calculation-steps">
-
-                        <article class="calculation-step">
-
-                            <div class="calculation-icon">
-                                <span>♧</span>
-                            </div>
-
-                            <span class="calculation-number">01</span>
-
-                            <div class="calculation-step-copy">
-
-                                <h3>Peer-group comparison</h3>
-
-                                <p>
-                                    We use machine learning to level the playing
-                                    field by comparing ships of similar age, type,
-                                    size, and flag.
-                                </p>
-
-                            </div>
-
-                        </article>
-
-
-                        <article class="calculation-step">
-
-                            <div class="calculation-icon">
-                                <span>▤</span>
-                            </div>
-
-                            <span class="calculation-number">02</span>
-
-                            <div class="calculation-step-copy">
-
-                                <h3>Global PSC data analysis</h3>
-
-                                <p>
-                                    The model tracks how these matching vessels
-                                    are treated across different ports worldwide
-                                    using years of global PSC records.
-                                </p>
-
-                            </div>
-
-                        </article>
-
-
-                        <article class="calculation-step">
-
-                            <div class="calculation-icon">
-                                <span>▥</span>
-                            </div>
-
-                            <span class="calculation-number">03</span>
-
-                            <div class="calculation-step-copy">
-
-                                <h3>Isolating port behavior</h3>
-
-                                <p>
-                                    By holding the vessel profile constant,
-                                    the algorithm isolates the port's actual
-                                    behavior, turning millions of historical
-                                    inspection data points into a clear index
-                                    of how strict your destination port will be.
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                    </div>
-
-
-                    <!-- BEYOND SIMPLE AVERAGES -->
-                    <div class="calculation-note">
-
-                        <div class="calculation-note-icon">▤</div>
-
-                        <div class="calculation-note-copy">
-
-                            <h3>Beyond simple averages</h3>
-
-                            <p>
-                                Traditional PSC strictness indexes only look at
-                                raw averages—like total deficiencies per vessel,
-                                or detentions divided by total inspections.
-                                On its own, that math doesn't tell the full story
-                                because it ignores the types of ships visiting
-                                those harbors. Combining these moving averages
-                                with machine learning algorithms gives you a
-                                true, complete picture of the Port State Control
-                                regime at every port.
-                            </p>
-
-                        </div>
-
-                    </div>
-
+                    <strong class="port-score" data-count="2">2</strong>
+                    <span class="port-description">Deficiencies</span>
                 </div>
 
+                <div class="port-card">
+                    <div class="port-card-heading">
+                        <span class="port-pin">⌖</span>
+                        <span>Port B</span>
+                    </div>
 
-                <!-- ANIMATED CONNECTOR LINES OVER ICEBERG -->
-                <svg class="iceberg-connectors" viewBox="0 0 650 650" preserveAspectRatio="none" aria-hidden="true">
+                    <div class="port-card-divider"></div>
 
-                    <path class="iceberg-line iceberg-line-one" d="M 0 125 L 260 125" />
+                    <strong class="port-score" data-count="8">8</strong>
+                    <span class="port-description">Deficiencies</span>
+                </div>
 
-                    <path class="iceberg-line iceberg-line-two" d="M 0 320 L 255 320" />
-
-                    <path class="iceberg-line iceberg-line-three" d="M 0 500 L 285 500" />
-
-                    <circle class="iceberg-marker" cx="260" cy="125" r="7" />
-                    <circle class="iceberg-marker" cx="255" cy="320" r="7" />
-                    <circle class="iceberg-marker" cx="285" cy="500" r="7" />
-
+                <svg class="port-connectors" viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M150 125 V205 L225 280" />
+                    <path d="M450 125 V205 L375 280" />
+                    <circle cx="225" cy="280" r="5"/>
+                    <circle cx="375" cy="280" r="5"/>
                 </svg>
 
             </div>
 
-        </section>
+        </div>
+    </section>
 
-        <footer class="site-footer" id="contact">
 
-            <div class="footer-main">
+    <!-- ICEBERG / CALCULATION SECTION -->
+    <section class="feature-calculation" id="calculation-section">
 
-                <div class="footer-brand-column">
-                    <a class="footer-logo" href="#">
-                        PORT<span>PLUS</span>
-                    </a>
+        <div class="underwater-background"></div>
+        <div class="underwater-light"></div>
+        <div class="underwater-particles"></div>
 
+        <!-- ICEBERG IMAGE LAYERS -->
+        <div class="iceberg-scene">
+
+            <div class="iceberg-top">
+                <img src="assets/images/01_top_iceberg.png" alt="">
+            </div>
+
+            <div class="iceberg-waterline">
+                <img src="assets/images/02_water_surface.png" alt="">
+            </div>
+
+            <div class="iceberg-underwater">
+                <img src="assets/images/04_submerged_iceberg.png" alt="">
+            </div>
+
+            <div class="iceberg-glow"></div>
+
+            <div class="iceberg-points">
+                <span class="ice-point point-one"></span>
+                <span class="ice-point point-two"></span>
+                <span class="ice-point point-three"></span>
+            </div>
+
+            <svg class="iceberg-connectors" viewBox="0 0 650 650" preserveAspectRatio="none" aria-hidden="true">
+                <path class="ice-line line-one" d="M0 125 H260"/>
+                <path class="ice-line line-two" d="M0 320 H255"/>
+                <path class="ice-line line-three" d="M0 500 H285"/>
+                <circle class="ice-marker" cx="260" cy="125" r="7"/>
+                <circle class="ice-marker" cx="255" cy="320" r="7"/>
+                <circle class="ice-marker" cx="285" cy="500" r="7"/>
+            </svg>
+
+        </div>
+
+
+        <div class="calculation-content">
+
+            <div class="calculation-copy feature-reveal">
+
+                <span class="feature-eyebrow light-eyebrow">
+                    <i></i> THE COMPLEX
+                </span>
+
+                <h2>
+                    How the<br>
+                    <span>Port stringency score</span><br>
+                    is calculated.
+                </h2>
+
+                <p class="calculation-intro">
+                    The logic begins with a simple question:
+                    if the exact same ship calls at two different ports,
+                    how does each port's PSC regime behave?
+                </p>
+
+            </div>
+
+
+            <div class="calculation-steps">
+
+                <article class="calculation-step feature-reveal">
+                    <div class="calculation-icon">
+                        <span>♧</span>
+                    </div>
+
+                    <span class="calculation-number">01</span>
+
+                    <div class="calculation-step-copy">
+                        <h3>Peer-group comparison</h3>
+                        <p>
+                            We use machine learning to level the playing
+                            field by comparing ships of similar age, type,
+                            size, and flag.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="calculation-step feature-reveal">
+                    <div class="calculation-icon">
+                        <span>▤</span>
+                    </div>
+
+                    <span class="calculation-number">02</span>
+
+                    <div class="calculation-step-copy">
+                        <h3>Global PSC data analysis</h3>
+                        <p>
+                            The model tracks how these matching vessels
+                            are treated across different ports worldwide
+                            using years of global PSC records.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="calculation-step feature-reveal">
+                    <div class="calculation-icon">
+                        <span>▥</span>
+                    </div>
+
+                    <span class="calculation-number">03</span>
+
+                    <div class="calculation-step-copy">
+                        <h3>Isolating port behavior</h3>
+                        <p>
+                            By holding the vessel profile constant,
+                            the algorithm isolates the port's actual
+                            behavior, turning millions of historical
+                            inspection data points into a clear index
+                            of how strict your destination port will be.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="calculation-note feature-reveal">
+
+                <div class="calculation-note-icon">▤</div>
+
+                <div class="calculation-note-copy">
+                    <h3>Beyond simple averages</h3>
                     <p>
-                        Smarter port state control intelligence.
-                        Prepare better. Navigate inspections with confidence.
+                        Traditional PSC strictness indexes only look at
+                        raw averages—like total deficiencies per vessel,
+                        or detentions divided by total inspections.
+                        On its own, that math doesn't tell the full story
+                        because it ignores the types of ships visiting
+                        those harbors. Combining these moving averages
+                        with machine learning algorithms gives you a
+                        true, complete picture of the Port State Control
+                        regime at every port.
                     </p>
-
-                    <a href="mailto:hello@portplus.com" class="footer-email">
-                        Get in touch <span>↗</span>
-                    </a>
-                </div>
-
-                <div class="footer-links-column">
-                    <span class="footer-label">EXPLORE</span>
-
-                    <a href="#insights">Features</a>
-                    <a href="#data">Our Data</a>
-                    <a href="#film">Platform</a>
-                </div>
-
-                <div class="footer-links-column">
-                    <span class="footer-label">COMPANY</span>
-
-                    <a href="#contact">Contact</a>
-                    <a href="#contact">About</a>
-                </div>
-
-                <div class="footer-cta">
-                    <span class="footer-label">PORT PLUS INTELLIGENCE</span>
-
-                    <h2>
-                        Know the port.<br>
-                        <span>Prepare better.</span>
-                    </h2>
-
-                    <a href="mailto:hello@portplus.com" class="footer-cta-link">
-                        Let's talk <span>↗</span>
-                    </a>
                 </div>
 
             </div>
 
-            <div class="footer-bottom">
+        </div>
 
-                <span>© 2026 PORT PLUS. ALL RIGHTS RESERVED.</span>
+        <!-- <div class="underwater-caption">
+            <span>PORT STATE CONTROL</span>
+            <span>BELOW THE SURFACE</span>
+        </div> -->
 
-                <a href="#" class="footer-back-top">
-                    BACK TO TOP <span>↑</span>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+
+        <div class="footer-main">
+
+            <div class="footer-brand-column">
+                <a class="footer-logo" href="#">
+                    PORT<span>PLUS</span>
                 </a>
 
+                <p>
+                    Smarter port state control intelligence.
+                    Prepare better. Navigate inspections with confidence.
+                </p>
+
+                <a href="mailto:hello@portplus.com" class="footer-email">
+                    Get in touch <span>↗</span>
+                </a>
             </div>
 
-        </footer>
-    </main>
+
+            <div class="footer-links-column">
+                <span class="footer-label">EXPLORE</span>
+                <a href="#insights">Features</a>
+                <a href="#data">Our Data</a>
+                <a href="#film">Platform</a>
+            </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
-    <script src="scripts/main.js"></script>
+            <div class="footer-links-column">
+                <span class="footer-label">COMPANY</span>
+                <a href="#contact">Contact</a>
+                <a href="#contact">About</a>
+            </div>
+
+
+            <div class="footer-cta">
+                <span class="footer-label">PORT PLUS INTELLIGENCE</span>
+
+                <h2>
+                    Know the port.<br>
+                    <span>Prepare better.</span>
+                </h2>
+
+                <a href="mailto:hello@portplus.com" class="footer-cta-link">
+                    Let's talk <span>↗</span>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <span>© 2026 PORT PLUS. ALL RIGHTS RESERVED.</span>
+
+            <a href="#" class="footer-back-top">
+                BACK TO TOP <span>↑</span>
+            </a>
+        </div>
+
+    </footer>
+
+</main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="scripts/main.js"></script>
+
+<!-- FEATURE PAGE ANIMATIONS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Reveal content as it enters the viewport
+    gsap.utils.toArray(".feature-reveal").forEach((element) => {
+        gsap.fromTo(element,
+            { y: 35, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.9,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 88%",
+                    once: true
+                }
+            }
+        );
+    });
+
+    // Iceberg scroll animation
+    const icebergTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".feature-calculation",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1.2
+        }
+    });
+
+    icebergTimeline
+        .fromTo(".iceberg-top",
+            { y: -45, scale: 0.94 },
+            { y: 15, scale: 1.04, ease: "none" }, 0
+        )
+        .fromTo(".iceberg-underwater",
+            { y: 100, scale: 0.94 },
+            { y: -35, scale: 1.04, ease: "none" }, 0
+        )
+        .fromTo(".iceberg-glow",
+            { opacity: 0.15 },
+            { opacity: 0.7, ease: "none" }, 0
+        )
+        .fromTo(".iceberg-waterline",
+            { y: 0 },
+            { y: -20, ease: "none" }, 0
+        );
+
+    // Draw connector lines on scroll
+    gsap.utils.toArray(".ice-line").forEach((line) => {
+        const length = line.getTotalLength();
+
+        gsap.set(line, {
+            strokeDasharray: length,
+            strokeDashoffset: length
+        });
+
+        gsap.to(line, {
+            strokeDashoffset: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".calculation-steps",
+                start: "top 85%",
+                end: "bottom 60%",
+                scrub: 1
+            }
+        });
+    });
+
+    // Marker pulse
+    gsap.to(".ice-marker", {
+        scale: 1.45,
+        transformOrigin: "center",
+        repeat: -1,
+        yoyo: true,
+        duration: 1.2,
+        stagger: 0.35,
+        ease: "sine.inOut"
+    });
+
+    // Gentle underwater movement
+    gsap.to(".underwater-light", {
+        x: 35,
+        y: -20,
+        duration: 5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+    });
+
+});
+</script>
+
 </body>
-
 </html>
