@@ -1,0 +1,6 @@
+/* TT Commons (licensed) — Latin subset, woff2 */
+@font-face{font-family:'TT Commons';font-weight:400;font-style:normal;font-display:swap;src:url('../assets/fonts/TTCommons-Regular.woff2') format('woff2')}
+@font-face{font-family:'TT Commons';font-weight:500;font-style:normal;font-display:swap;src:url('../assets/fonts/TTCommons-Medium.woff2') format('woff2')}
+@font-face{font-family:'TT Commons';font-weight:600;font-style:normal;font-display:swap;src:url('../assets/fonts/TTCommons-DemiBold.woff2') format('woff2')}
+@font-face{font-family:'TT Commons';font-weight:700;font-style:normal;font-display:swap;src:url('../assets/fonts/TTCommons-Bold.woff2') format('woff2')}
+@font-face{font-family:'TT Commons';font-weight:800;font-style:normal;font-display:swap;src:url('../assets/fonts/TTCommons-ExtraBold.woff2') format('woff2')}

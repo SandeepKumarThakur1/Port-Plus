@@ -15,45 +15,48 @@
       theme: {
         extend: {
           colors: { accent: '#ff3b2f', ink: '#111111', paper: '#f7f7f5' },
-          fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] }
+          fontFamily: { sans: ['TT Commons', 'system-ui', 'sans-serif'] }
         }
       }
     }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/TTCommons-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/fonts.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 
-<body class="bg-white text-ink antialiased">
+<body id="top" class="bg-white text-ink antialiased">
+  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav-shell" aria-label="Main navigation">
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       <div class="nav-links nav-left">
-        <a href="./features.html">Features</a>
-        <a href="./pricing.html">Pricing</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
       </div>
-      <a class="brand" href="#" aria-label="Port Plus home">PORT<span>PLUS</span></a>
+      <a class="brand" href="index.html" aria-label="Zero Detention home"><img src="assets/logo/zero-detention-on-light.png" width="1709" height="290" alt="Zero Detention — PSC Intelligence"></a>
       <div class="nav-links nav-right">
-        <a href="./blog.html">Blog</a>
-        <a href="./contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-login" href="#login">Login</a>
       </div>
     </nav>
     <div class="mobile-menu">
-      <a href="./features.html">Features</a>
-      <a href="./pricing.html">Pricing</a>
-      <a href="./blog.html">Blog</a>
-      <a href="./contact.html">Contact</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login">Login</a>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero-section">
       <div class="hero-inner">
         <h1>Port State Control<br><span>Intelligence</span><br>Delivered in Seconds.</h1>
-        <a class="scroll-cue" href="#film" aria-label="Scroll to see more"><span>↓</span></a>
+        <a class="scroll-cue" href="#film" aria-label="Scroll to see more"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
         <p class="hero-note">Every Port State inspection has a pattern. We try to decode it.<br>
           Know how each port behaves for port state inspections. Know the probable findings.<br>
           Powered by machine learning.</p>
@@ -78,31 +81,30 @@
         <h2>Four insights.<br>One platform.</h2>
         <p>Actionable intelligence to help you prepare,<br class="desktop-only"> plan and reduce inspection risks.</p>
       </div>
-      </div>
       <div class="insight-grid">
-        <a class="insight-card" href="#contact"><span class="line-icon">▥</span>
+        <a class="insight-card" href="feature-port-stringency-index.html"><span class="line-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20a8 8 0 1 1 16 0"/><path d="M12 20l4-6"/><circle cx="12" cy="20" r="1"/></svg></span>
           <div>
             <h3>Port Stringency Index</h3>
             <p>A live strictness rating for every port — how hard the Port State Control inspection generally is.</p>
-          </div><span class="arrow">↗</span>
+          </div><span class="arrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
         </a>
-        <a class="insight-card" href="#contact"><span class="line-icon">▤</span>
+        <a class="insight-card" href="feature-most-likely-findings.html"><span class="line-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 11l2 2 4-4M9 17h6"/></svg></span>
           <div>
             <h3>Most Likely Findings</h3>
             <p>The deficiencies this vessel is most likely to be written up for at this destination.</p>
-          </div><span class="arrow">↗</span>
+          </div><span class="arrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
         </a>
-        <a class="insight-card" href="#contact"><span class="line-icon">♧</span>
+        <a class="insight-card" href="feature-ship-psc-scorecard.html"><span class="line-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 16l2 4h14l2-4-9-3z"/><path d="M12 13V3l6 7"/><path d="M12 8H8"/></svg></span>
           <div>
             <h3>Ship PSC Score Card</h3>
             <p>The vessel’s full performance scoring and risk analysis across the various PSC regimes.</p>
-          </div><span class="arrow">↗</span>
+          </div><span class="arrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
         </a>
-        <a class="insight-card" href="#contact"><span class="line-icon">♙</span>
+        <a class="insight-card" href="feature-operator-psc-scorecard.html"><span class="line-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6M15 14.2c3 .1 6 1.8 6 5.8"/></svg></span>
           <div>
             <h3>Operator PSC Score Card</h3>
             <p>Fleet level performance score card and risk analysis across the various PSC regimes.</p>
-          </div><span class="arrow">↗</span>
+          </div><span class="arrow"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
         </a>
       </div>
     </section>
@@ -126,18 +128,18 @@
           <circle class="wave-end" cx="1192" cy="52" r="4" />
         </svg>
         <article class="step"><span class="step-number">01</span>
-          <div class="step-icon">⌘</div>
+          <div class="step-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/></svg></div>
           <h3>Connect</h3>
           <p>Open the web browser on your desktop, or add the bot on Telegram (no complex software installation
             required).</p>
         </article>
         <article class="step"><span class="step-number">02</span>
-          <div class="step-icon">▤</div>
+          <div class="step-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg></div>
           <h3>Input</h3>
           <p>Drop an IMO number &amp; destination port.</p>
         </article>
         <article class="step"><span class="step-number">03</span>
-          <div class="step-icon">▥</div>
+          <div class="step-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></div>
           <h3>Prepare</h3>
           <p>Get insights directly to your device.</p>
         </article>
@@ -178,8 +180,6 @@
 
       <div class="data-visual" role="img" aria-label="Cargo ship at sea">
 
-        <!-- <div class="map-dots"></div>
-
         <div class="data-orbit">
           <span class="orbit-dot dot-one"></span>
           <span class="orbit-dot dot-two"></span>
@@ -188,74 +188,37 @@
           <span class="orbit-dot dot-five"></span>
         </div>
 
-        <div class="ship-shape">
-          ▰<br>▰<br>▰
-        </div> -->
-        <img src="assets/images/ship-at-sea.png" alt="Cargo ship at sea" />
+        <img src="assets/images/ship-at-sea.webp" alt="Cargo ship at sea" loading="lazy" decoding="async" />
 
       </div>
 
     </section>
 
-    <footer class="site-footer" id="contact">
-
-      <div class="footer-main">
-
-        <div class="footer-brand-column">
-          <a class="footer-logo" href="#">
-            PORT<span>PLUS</span>
-          </a>
-
-          <p>
-            Smarter port state control intelligence.
-            Prepare better. Navigate inspections with confidence.
-          </p>
-
-          <a href="mailto:hello@portplus.com" class="footer-email">
-            Get in touch <span>↗</span>
-          </a>
+    <footer class="zg" id="site-footer">
+      <div class="zg-in">
+        <div class="zg-grid">
+          <div class="zg-left">
+            <a class="zg-logo" href="index.html" aria-label="Zero Detention home"><img src="assets/logo/zero-detention-on-dark.png" width="1709" height="290" alt="Zero Detention — PSC Intelligence" loading="lazy"></a>
+            <p class="zg-tag">Know the port.<br><span>Prepare better.</span></p>
+            <a class="zg-mail" href="mailto:connect@zerodetention.com">connect@zerodetention.com <i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+            <a class="zg-wa" href="contact.html#community"><b>Join our WhatsApp community</b><span>Free weekly PSC intelligence reports, trends and findings.</span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+            <address>Aazadi LLC<br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</address>
+          </div>
+          <nav class="zg-list" aria-label="Footer">
+            <div class="zg-item">
+              <a class="zg-row" href="features.html"><span class="zg-n">01</span><span class="zg-t">Features<small>Four insights. One platform.</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+              <div class="zg-sub"><a href="feature-port-stringency-index.html">Port Stringency Index</a><a href="feature-most-likely-findings.html">Most Likely Findings</a><a href="feature-ship-psc-scorecard.html">Ship PSC Scorecard</a><a href="feature-operator-psc-scorecard.html">Operator PSC Scorecard</a></div>
+            </div>
+            <a class="zg-row" href="pricing.html"><span class="zg-n">02</span><span class="zg-t">Pricing<small>One-time check, 3-month pass, fleet intelligence</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+            <a class="zg-row" href="blog.html"><span class="zg-n">03</span><span class="zg-t">Blog<small>PSC trends and inspection insights</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+            <a class="zg-row" href="contact.html"><span class="zg-n">04</span><span class="zg-t">Contact<small>Questions about pricing, access or a report</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+          </nav>
         </div>
-
-        <div class="footer-links-column">
-          <span class="footer-label">EXPLORE</span>
-
-          <a href="#insights">Features</a>
-          <a href="#data">Our Data</a>
-          <a href="#film">Platform</a>
+        <div class="zg-bar">
+          <span>© 2026 Zero Detention · Operated by Aazadi LLC</span>
+          <span class="zg-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a class="zg-top" href="#top">Back to top <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></span>
         </div>
-
-        <div class="footer-links-column">
-          <span class="footer-label">COMPANY</span>
-
-          <a href="#contact">Contact</a>
-          <a href="#contact">About</a>
-        </div>
-
-        <div class="footer-cta">
-          <span class="footer-label">PORT PLUS INTELLIGENCE</span>
-
-          <h2>
-            Know the port.<br>
-            <span>Prepare better.</span>
-          </h2>
-
-          <a href="mailto:hello@portplus.com" class="footer-cta-link">
-            Let's talk <span>↗</span>
-          </a>
-        </div>
-
       </div>
-
-      <div class="footer-bottom">
-
-        <span>© 2026 PORT PLUS. ALL RIGHTS RESERVED.</span>
-
-        <a href="#" class="footer-back-top">
-          BACK TO TOP <span>↑</span>
-        </a>
-
-      </div>
-
     </footer>
 
   </main>
@@ -264,6 +227,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="scripts/nav.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="A live strictness rating for every port — how hard the Port State Control inspection generally is.">
+  <title>Port Stringency Index · Zero Detention</title>
+  <link rel="icon" href="assets/logo/zero-detention-on-light.png">
+  <link rel="preload" href="assets/fonts/TTCommons-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/TTCommons-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/features.css">
+</head>
+<body id="top" class="fx">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-links nav-left">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <a class="brand" href="index.html" aria-label="Zero Detention home"><img src="assets/logo/zero-detention-on-light.png" width="1709" height="290" alt="Zero Detention — PSC Intelligence"></a>
+      <div class="nav-links nav-right">
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-login" href="#login">Login</a>
+      </div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login">Login</a>
+    </div>
+  </header>
+
+  <main id="main">
+<div class="air">
+  <div class="wrap">
+
+    <section class="banner" aria-label="Feature 1">
+      <span class="tag">Feature 1</span>
+      <h1>Port Stringency Index</h1>
+      <p>How strict is Port State Control at your destination port?</p>
+    </section>
+
+    <section class="panel" id="simple" aria-labelledby="h-simple">
+      <div>
+        <h2 class="hd" id="h-simple">Same ship. Two ports. Different results.</h2>
+        <p class="lede">Imagine the same ship facing a Port State Control inspection at two different ports. At the first port, it receives 2 deficiencies. At the second, it receives 8.</p>
+        <p>The ship is the same. The crew is the same. The maintenance standards are the same. So why such a difference?</p>
+        <p>Part of the answer could be the port itself. Some ports tend to be stricter than others.</p>
+        <p>One inspection alone cannot tell us much. But when we look at tens of thousands of inspections, patterns begin to emerge.</p>
+        <p><strong>That is what the Port Stringency Index measures.</strong> It helps you understand how strict Port State Control tends to be at your destination port.</p>
+      </div>
+      <aside class="viz" aria-label="Deficiencies for the same ship at two ports">
+        <h2>One ship, two inspections</h2>
+        <div class="row"><div class="lbl"><span>Port A</span><span>2 deficiencies</span></div><div class="track"><div class="fill" style="width:25%"></div></div></div>
+        <div class="row"><div class="lbl"><span>Port B</span><span>8 deficiencies</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+        <div class="note">Same ship, same crew, same maintenance standards.</div>
+      </aside>
+    </section>
+  </div>
+<div class="swell" aria-hidden="true">
+        <svg viewBox="0 0 1200 200" preserveAspectRatio="none" height="200"><path fill="rgba(0,102,204,.35)"/><path fill="#0066CC"/></svg>
+      </div>
+    </div>
+
+<div class="water">
+  <div class="wrap">
+    <section class="panel reveal" id="complex" aria-labelledby="h-complex">
+      <div>
+        <h2 class="hd" id="h-complex">Comparing ports fairly takes more than averages.</h2>
+        <p class="lede">Comparing the strictness of two ports is not as simple as comparing their average deficiencies or Port State Control detention rates.</p>
+        <p>Consider a port that regularly receives older bulk carriers and another that mainly handles newer vessels. The first port may record more deficiencies, but that doesn't necessarily mean its PSC inspections are stricter. The difference could simply be due to the types of ships being inspected.</p>
+        <p>To account for this, we analyse years of PSC inspection records using machine learning. Our model compares vessels with similar characteristics and examines how these comparable ships perform across different ports, including those covered by the Paris MoU and Tokyo MoU.</p>
+        <p>By accounting for differences in the vessels visiting each port, the model estimates how strict each port tends to be, independently of the general condition and characteristics of its visiting fleet.</p>
+        <p><strong>The result is a Port Stringency Index that goes beyond traditional deficiency averages and detention rates,</strong> giving you a more meaningful picture of the PSC inspection environment at your destination port.</p>
+      </div>
+      <aside class="viz" aria-label="How the index is built">
+        <h2>How the index is built</h2>
+        <div class="chips"><span class="chip">Ship type</span><span class="chip">Age</span><span class="chip">Size</span></div>
+        <div class="step"><i class="dot"></i><div><b>Years of PSC records</b><span>Including Paris MoU and Tokyo MoU ports</span></div></div>
+        <div class="step"><i class="dot"></i><div><b>Compare similar vessels</b><span>Machine learning matches comparable ships across ports</span></div></div>
+        <div class="step"><i class="dot"></i><div><b>Remove fleet-mix effects</b><span>Isolates the port from the ships that visit it</span></div></div>
+        <div class="step"><i class="dot"></i><div><b>Port Stringency Index</b><span>How strict PSC tends to be at your port</span></div></div>
+      </aside>
+    </section>
+  </div>
+</div>
+  </main>
+    <footer class="zg" id="site-footer">
+      <div class="zg-in">
+        <div class="zg-grid">
+          <div class="zg-left">
+            <a class="zg-logo" href="index.html" aria-label="Zero Detention home"><img src="assets/logo/zero-detention-on-dark.png" width="1709" height="290" alt="Zero Detention — PSC Intelligence" loading="lazy"></a>
+            <p class="zg-tag">Know the port.<br><span>Prepare better.</span></p>
+            <a class="zg-mail" href="mailto:connect@zerodetention.com">connect@zerodetention.com <i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+            <a class="zg-wa" href="contact.html#community"><b>Join our WhatsApp community</b><span>Free weekly PSC intelligence reports, trends and findings.</span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+            <address>Aazadi LLC<br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</address>
+          </div>
+          <nav class="zg-list" aria-label="Footer">
+            <div class="zg-item">
+              <a class="zg-row" href="features.html"><span class="zg-n">01</span><span class="zg-t">Features<small>Four insights. One platform.</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+              <div class="zg-sub"><a href="feature-port-stringency-index.html">Port Stringency Index</a><a href="feature-most-likely-findings.html">Most Likely Findings</a><a href="feature-ship-psc-scorecard.html">Ship PSC Scorecard</a><a href="feature-operator-psc-scorecard.html">Operator PSC Scorecard</a></div>
+            </div>
+            <a class="zg-row" href="pricing.html"><span class="zg-n">02</span><span class="zg-t">Pricing<small>One-time check, 3-month pass, fleet intelligence</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+            <a class="zg-row" href="blog.html"><span class="zg-n">03</span><span class="zg-t">Blog<small>PSC trends and inspection insights</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+            <a class="zg-row" href="contact.html"><span class="zg-n">04</span><span class="zg-t">Contact<small>Questions about pricing, access or a report</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+          </nav>
+        </div>
+        <div class="zg-bar">
+          <span>© 2026 Zero Detention · Operated by Aazadi LLC</span>
+          <span class="zg-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a class="zg-top" href="#top">Back to top <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></span>
+        </div>
+      </div>
+    </footer>
+
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/wave.js"></script>
+</body>
+</html>

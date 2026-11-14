@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="How an operator has performed compared with its peers, across PSC regimes.">
+  <title>Operator PSC Scorecard · Zero Detention</title>
+  <link rel="icon" href="assets/logo/zero-detention-on-light.png">
+  <link rel="preload" href="assets/fonts/TTCommons-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/TTCommons-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/features.css">
+  <link rel="stylesheet" href="styles/pages/feature-ship-psc-scorecard.css">
+</head>
+<body id="top" class="fx">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-links nav-left">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <a class="brand" href="index.html" aria-label="Zero Detention home"><img src="assets/logo/zero-detention-on-light.png" width="1709" height="290" alt="Zero Detention — PSC Intelligence"></a>
+      <div class="nav-links nav-right">
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-login" href="#login">Login</a>
+      </div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#login">Login</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="air">
+      <div class="wrap">
+        <section class="banner" aria-label="Feature 4">
+          <span class="tag">Feature 4</span>
+          <h1>Operator PSC Scorecard</h1>
+          <p>How does an operator's fleet perform compared with fleets of similar vessels?</p>
+        </section>
+
+        <section class="panel wide" id="simple" aria-labelledby="h-simple">
+          <div>
+            <h2 class="hd" id="h-simple">Two fleets. Very different ships.</h2>
+            <p class="lede">Imagine two ship operators.</p>
+            <p>One manages 20 brand-new container ships. The other manages 20 aging bulk carriers.</p>
+            <p>The first operator will probably record fewer PSC deficiencies. Looking at the total numbers, it might appear that the first operator is doing a much better job.</p>
+            <p>But is that necessarily true?</p>
+            <p>The second operator could have an excellent maintenance team, managing a much older fleet under far more demanding conditions.</p>
+            <p>Simply comparing the total deficiencies or detentions across their fleets would not give us a fair picture.</p>
+            <p><strong>That is what the Operator PSC Scorecard addresses.</strong></p>
+            <p>It compares each vessel in an operator's fleet against ships of similar age, type and size, while also accounting for the strictness of the ports where those vessels have been inspected.</p>
+            <p>For charterers, insurers and owners, this provides a fairer way to compare operators, regardless of the age or composition of their fleets.</p>
+          </div>
+          <aside class="viz sticky" aria-label="Face value compared with peers">
+            <h2>Face value versus peers</h2>
+            <div class="vessel face">
+              <div class="vh"><b>Operator A</b><span>20 brand-new container ships</span></div>
+              <div class="row"><div class="lbl"><span>At face value</span><span>Fewer deficiencies</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div>
+              <div class="row"><div class="lbl"><span>Among similar fleets</span><span>About average</span></div><div class="peer"><span class="pm" style="left:52%"></span></div><div class="scale"><span>Weaker</span><span>Stronger</span></div></div>
+            </div>
+            <div class="vessel face">
+              <div class="vh"><b>Operator B</b><span>20 aging bulk carriers</span></div>
+              <div class="row"><div class="lbl"><span>At face value</span><span>More deficiencies</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+              <div class="row"><div class="lbl"><span>Among similar fleets</span><span>Better than most</span></div><div class="peer"><span class="pm" style="left:74%"></span></div><div class="scale"><span>Weaker</span><span>Stronger</span></div></div>
+            </div>
+            <div class="note">Illustrative example.</div>
+          </aside>
+        </section>
+      </div>
+    <div class="swell" aria-hidden="true">
+        <svg viewBox="0 0 1200 200" preserveAspectRatio="none" height="200"><path fill="rgba(0,102,204,.35)"/><path fill="#0066CC"/></svg>
+      </div>
+    </div>
+
+    <div class="water">
+      <div class="wrap">
+        <section class="panel wide reveal" id="complex" aria-labelledby="h-complex">
+          <div>
+            <h2 class="hd" id="h-complex">Comparing fleets on equal terms.</h2>
+            <p class="lede">Comparing the PSC performance of two operators is not straightforward when their fleets differ significantly in age, ship type, size and trading patterns.</p>
+            <p>An operator managing newer vessels may naturally record fewer deficiencies than one managing an older fleet. Similarly, operators whose vessels regularly visit high-scrutiny ports may accumulate more findings than those trading in less stringent regions.</p>
+            <p>Our machine learning models account for these differences by evaluating every vessel in an operator's fleet against its own peer group.</p>
+            <p>Each ship is benchmarked against vessels of similar age, type and size, using historical PSC inspection records across major MoU regions, including the Paris MoU and Tokyo MoU. The model also adjusts for differences in port stringency, so vessels trading through stricter ports are assessed in the context of the inspection conditions they face.</p>
+            <p>These peer-adjusted vessel scores are then combined to calculate an overall PSC performance score for the operator.</p>
+            <p>By accounting for fleet composition and port strictness, the model allows operators with very different fleets to be compared on a more consistent basis.</p>
+            <p><strong>The result is an Operator PSC Scorecard</strong> that shows how an operator's fleet has performed relative to comparable vessels, giving charterers, insurers and owners a more meaningful basis for evaluating its PSC track record.</p>
+          </div>
+          <div class="score sticky" role="group" aria-label="Example operator PSC score">
+            <div class="sc-top">
+              <div><div class="lab">Peer-adjusted operator PSC score</div><div class="big">72<small>out of 100</small></div></div>
+              <svg class="gauge" viewBox="0 0 160 92" aria-hidden="true"><path class="gt" d="M10 82A70 70 0 0 1 150 82"/><path class="gf" d="M10 82A70 70 0 0 1 150 82"/></svg>
+            </div>
+            <div class="adj"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></svg><div><b>Every vessel, its own peer group</b><span>Similar age, ship type and size</span></div></div>
+            <div class="adj"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Port strictness</b><span>Adjusted for the ports where vessels were inspected</span></div></div>
+            <div class="adj"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><div><b>Regions</b><span>Paris MoU and Tokyo MoU</span></div></div>
+            <div class="adj"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><div><b>Combined into one score</b><span>Peer-adjusted vessel scores roll up to the operator</span></div></div>
+            <div class="foot">Illustrative example for one operator.</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+    <footer class="zg" id="site-footer">
+      <div class="zg-in">
+        <div class="zg-grid">
+          <div class="zg-left">
+            <a class="zg-logo" href="index.html" aria-label="Zero Detention home"><img src="assets/logo/zero-detention-on-dark.png" width="1709" height="290" alt="Zero Detention — PSC Intelligence" loading="lazy"></a>
+            <p class="zg-tag">Know the port.<br><span>Prepare better.</span></p>
+            <a class="zg-mail" href="mailto:connect@zerodetention.com">connect@zerodetention.com <i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+            <a class="zg-wa" href="contact.html#community"><b>Join our WhatsApp community</b><span>Free weekly PSC intelligence reports, trends and findings.</span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+            <address>Aazadi LLC<br>30 N Gould St, STE R<br>Sheridan, WY 82801, United States</address>
+          </div>
+          <nav class="zg-list" aria-label="Footer">
+            <div class="zg-item">
+              <a class="zg-row" href="features.html"><span class="zg-n">01</span><span class="zg-t">Features<small>Four insights. One platform.</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+              <div class="zg-sub"><a href="feature-port-stringency-index.html">Port Stringency Index</a><a href="feature-most-likely-findings.html">Most Likely Findings</a><a href="feature-ship-psc-scorecard.html">Ship PSC Scorecard</a><a href="feature-operator-psc-scorecard.html">Operator PSC Scorecard</a></div>
+            </div>
+            <a class="zg-row" href="pricing.html"><span class="zg-n">02</span><span class="zg-t">Pricing<small>One-time check, 3-month pass, fleet intelligence</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+            <a class="zg-row" href="blog.html"><span class="zg-n">03</span><span class="zg-t">Blog<small>PSC trends and inspection insights</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+            <a class="zg-row" href="contact.html"><span class="zg-n">04</span><span class="zg-t">Contact<small>Questions about pricing, access or a report</small></span><i aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+          </nav>
+        </div>
+        <div class="zg-bar">
+          <span>© 2026 Zero Detention · Operated by Aazadi LLC</span>
+          <span class="zg-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a class="zg-top" href="#top">Back to top <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></span>
+        </div>
+      </div>
+    </footer>
+
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/wave.js"></script>
+</body>
+</html>
