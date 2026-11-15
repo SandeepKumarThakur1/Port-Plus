@@ -1,0 +1,111 @@
+/* ==========================================
+   PAGE LOADER — "Load line"
+   A Plimsoll mark fills with water to the line while the
+   deficiency count runs down to zero. Markup comes from scripts/loader.js.
+========================================== */
+
+.pp-loader{
+  --pp-accent:#FF3C1E;
+  --pp-ink:#111;
+  --pp-muted:#5E6F77;
+  --pp-paper:#fff;
+  --pp-line:#e8e7e4;
+  position:fixed;inset:0;z-index:9999;
+  font-family:'TT Commons',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:var(--pp-ink);
+  pointer-events:all;
+  transition:transform 1.05s cubic-bezier(.76,0,.24,1);
+  will-change:transform;
+}
+.pp-loader__panel{
+  position:absolute;inset:0;background:var(--pp-paper);
+  display:grid;place-items:center;
+}
+/* faint chart grid, like a nautical plot sheet */
+.pp-loader__panel::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(var(--pp-line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--pp-line) 1px,transparent 1px);
+  background-size:56px 56px;background-position:center center;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 0,transparent 62%);
+          mask-image:radial-gradient(circle at 50% 50%,#000 0,transparent 62%);
+  opacity:.75;
+}
+/* red wave edge that trails the panel as it lifts away */
+.pp-loader__edge{
+  position:absolute;left:0;right:0;top:100%;
+  width:100%;height:90px;display:block;margin-top:-1px;
+}
+.pp-loader__edge .e1{fill:var(--pp-accent)}
+.pp-loader__edge .e2{fill:var(--pp-paper)}
+
+.pp-loader__core{
+  position:relative;display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+}
+.pp-loader__mark{width:148px;height:148px;display:block;overflow:visible}
+.pp-loader__mark .ring{fill:none;stroke:var(--pp-ink);stroke-width:6}
+.pp-loader__mark .bar{fill:var(--pp-ink)}
+.pp-loader__mark .w-back{fill:var(--pp-accent);opacity:.32}
+.pp-loader__mark .w-front{fill:var(--pp-accent)}
+.pp-loader__mark .tick{fill:var(--pp-ink)}
+
+.pp-loader__count{
+  margin-top:30px;
+  font-weight:600;font-size:clamp(64px,9vw,104px);line-height:.86;
+  letter-spacing:-.045em;font-variant-numeric:tabular-nums;
+  transition:color .35s ease;
+}
+.pp-loader__label{
+  margin-top:12px;font-size:15px;font-weight:600;letter-spacing:-.01em;
+  height:1.2em;overflow:hidden;position:relative;min-width:16ch;
+}
+.pp-loader__label span{
+  display:block;transition:transform .5s cubic-bezier(.65,0,.35,1),opacity .4s ease;
+}
+.pp-loader__label .next{position:absolute;inset:0;transform:translateY(110%);opacity:0;color:var(--pp-accent)}
+
+.pp-loader__check{
+  margin-top:26px;
+  font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--pp-muted);min-height:1.2em;
+}
+.pp-loader__check b{font-weight:600;color:var(--pp-ink);transition:opacity .18s ease}
+
+.pp-loader__foot{
+  position:absolute;left:6.5%;right:6.5%;bottom:34px;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:20px;
+  font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--pp-muted);
+}
+.pp-loader__foot .pct{color:var(--pp-ink);font-variant-numeric:tabular-nums;letter-spacing:.12em}
+.pp-loader__brand i{font-style:normal}
+.pp-loader__brand b{color:var(--pp-accent);font-weight:600}
+
+/* finished state */
+.pp-loader.is-clear .pp-loader__count{color:var(--pp-accent)}
+.pp-loader.is-clear .pp-loader__label .now{transform:translateY(-110%);opacity:0}
+.pp-loader.is-clear .pp-loader__label .next{transform:none;opacity:1}
+.pp-loader.is-clear .pp-loader__mark{animation:pp-seal .7s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pp-seal{40%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+/* exit: lift the whole sheet, the red wave sweeps up after it */
+.pp-loader.is-leaving{transform:translateY(calc(-100% - 90px))}
+.pp-loader.is-leaving .pp-loader__core{transition:transform .9s cubic-bezier(.76,0,.24,1),opacity .5s ease;transform:translateY(-40px);opacity:0}
+
+/* page beneath: lock scroll while loading */
+html.pp-loading,html.pp-loading body{overflow:hidden!important}
+
+@media (max-width:600px){
+  .pp-loader__mark{width:118px;height:118px}
+  .pp-loader__check{letter-spacing:.22em;font-size:11px}
+  .pp-loader__foot{bottom:24px;font-size:10px;letter-spacing:.22em}
+  .pp-loader__brand i{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .pp-loader{transition:opacity .4s ease}
+  .pp-loader.is-leaving{transform:none;opacity:0}
+  .pp-loader__edge{display:none}
+  .pp-loader.is-clear .pp-loader__mark{animation:none}
+}
