@@ -1635,3 +1635,12 @@ a {
 .arrow .ic{width:20px;height:20px}
 .scroll-cue .ic{width:18px;height:18px}
 .step-icon .ic{width:24px;height:24px;color:var(--accent)}
+
+/* ---- Nov 2026 updates ---- */
+.insight-card:nth-child(n + 1) { border-bottom: 1px solid var(--line); }
+.stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stats strong { font-size: clamp(20px, 2.1vw, 28px); letter-spacing: -1px; white-space: nowrap; }
+@media (max-width: 760px) {
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 22px; }
+    .stats>div:nth-child(3) { padding-left: 0; border-left: 0; }
+}

@@ -57,7 +57,7 @@ table.pt{width:100%;border-collapse:separate;border-spacing:0 6px;table-layout:f
 .pt tbody th{font-weight:500;border-radius:20px 0 0 20px}
 .pt tbody td:last-child{border-radius:0 20px 20px 0}
 .pt tbody tr:nth-child(even) th,.pt tbody tr:nth-child(even) td{background:#fff}
-.pt .yes{display:inline-flex;color:#000}
+.pt .yes{display:inline-flex;color:#1E9E5A}
 .pt .yes svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .pt .no{display:inline-block;width:14px;height:2px;border-radius:2px;background:#8FAAB4;vertical-align:middle}
 .sub{display:block;font-size:14px;color:var(--muted);margin-top:2px}
@@ -72,14 +72,6 @@ table.pt{width:100%;border-collapse:separate;border-spacing:0 6px;table-layout:f
 .water .wrap{padding-top:64px;padding-bottom:64px}
 .water h2.hd{max-width:16ch}
 .water .aud{color:var(--text);opacity:.92}
-.ent{background:#fff;color:#000;--m:#3F5963;--ln:rgba(22,38,45,.12);border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(17,17,17,.06)}
-.ent .it{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:16px;align-items:start;padding:24px 28px;border-bottom:1px solid var(--ln)}
-.ent .ico{width:28px;height:28px;stroke:#000;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
-.ent .it b{display:block;font-weight:500;font-size:20px;line-height:1.25}
-.ent .it span{display:block;font-size:15px;color:var(--m);margin-top:3px}
-.ent .go{padding:26px 28px 30px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
-.ent .from{font-size:30px;font-weight:500;letter-spacing:-.02em;line-height:1.1}
-.ent .avail{font-size:15px;color:var(--m);margin-bottom:16px}
 .cover{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:16px;align-items:start;margin-top:48px;padding:22px 28px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.1)}
 .cover .ico{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
 .cover b{display:block;font-weight:500;font-size:19px;line-height:1.25}
@@ -98,7 +90,9 @@ table.pt{width:100%;border-collapse:separate;border-spacing:0 6px;table-layout:f
 .pt thead th:first-child{border-radius:16px 0 0 16px}.pt thead th:last-child{border-radius:0 16px 16px 0}
 .sub{font-size:12px}
 .extras{grid-template-columns:1fr}
-.ent .it,.ent .go{padding-left:20px;padding-right:20px}
 .cover{padding:18px 20px;margin-top:36px}
 .water .wrap{padding-top:48px;padding-bottom:48px}
 }
+
+.pt thead th .btn{white-space:nowrap}
+@media (max-width:820px){.plans{overflow-x:auto}table.pt{min-width:620px}}
