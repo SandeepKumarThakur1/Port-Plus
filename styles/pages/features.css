@@ -14,3 +14,4 @@
 .banner>*{animation:none!important}
 .fcard,.viz{transition:none!important}
 .fcard:hover{transform:none}
+.fcard p{font-size:18px}

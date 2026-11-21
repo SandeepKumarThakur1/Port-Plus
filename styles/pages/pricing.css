@@ -96,3 +96,6 @@ table.pt{width:100%;border-collapse:separate;border-spacing:0 6px;table-layout:f
 
 .pt thead th .btn{white-space:nowrap}
 @media (max-width:820px){.plans{overflow-x:auto}table.pt{min-width:620px}}
+.banner .lede{font-size:20px}
+.banner .aud{font-size:22px}
+.xc p,.cover p{font-size:17px}

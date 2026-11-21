@@ -28,3 +28,5 @@
 .tbl .tr .lk{grid-column:1/-1}
 .tbl .foot{padding:14px 18px}
 }
+.nm span{font-size:15px}
+.tbl .foot{font-size:14px}

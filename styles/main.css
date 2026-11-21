@@ -1644,3 +1644,22 @@ a {
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 22px; }
     .stats>div:nth-child(3) { padding-left: 0; border-left: 0; }
 }
+
+/* ---- Larger body text (home) ---- */
+.hero-note { font-size: 18px; line-height: 1.5; }
+.section-heading>p { font-size: 17px; line-height: 1.55; }
+.insight-card h3 { font-size: 21px; }
+.insight-card p { font-size: 16px; line-height: 1.55; }
+.steps-top .eyebrow, .data-copy .eyebrow { font-size: 13px; }
+.steps-top p { font-size: 16px; line-height: 1.55; }
+.step h3 { font-size: 21px; }
+.step p { font-size: 16px; line-height: 1.55; }
+.data-copy>p { font-size: 17px; line-height: 1.6; }
+.stats small { font-size: 11px; letter-spacing: 1.4px; }
+@media (max-width: 760px) {
+    .hero-note { font-size: 15px; }
+    .section-heading>p, .data-copy>p { font-size: 16px; }
+    .insight-card h3, .step h3 { font-size: 19px; }
+    .insight-card p, .steps-top p, .step p { font-size: 15px; }
+    .stats small { font-size: 10px; letter-spacing: 1px; }
+}

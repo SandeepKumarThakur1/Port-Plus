@@ -13,7 +13,7 @@ styles/  fonts.css (TT Commons @font-face) · layout.css (header, mobile menu, f
          main.css (home only) · features.css (shared by feature pages + pricing) · pages/*.css (per page)
 scripts/ nav.js (mobile menu, every page) · main.js (home: GSAP/Lenis/video scrub)
          features.js (scroll reveal + follow-the-cursor wave)
-assets/  fonts/ (TT Commons woff2, 400/500/600/700/800) · logo/ (on-light, on-dark) · images/ · videos/
+assets/  fonts/ (TT Commons woff2, 400/500/600/700/800) · logo/ (on-light.svg, on-dark.svg) · favicon/ (svg, png, apple-touch) · images/ · videos/
 ```
 Run with VS Code Live Server (open `index.html`). Pages use relative paths, so any static host works.
 
