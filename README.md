@@ -1,4 +1,4 @@
-# Zero Detention / Port Plus website
+# Zero Detention website
 
 ## Structure
 ```
@@ -18,6 +18,7 @@ assets/  fonts/ (TT Commons woff2, 400/500/600/700/800) · logo/ (on-light.svg, 
 Run with VS Code Live Server (open `index.html`). Pages use relative paths, so any static host works.
 
 ## Notes
-- Placeholders to replace: prices ($X, $Y, $Z) and links `#software-page`, `#stripe-monthly-pass`, `#stripe-fleet-pass`, `#stripe-dashboard` in pricing.html; `#whatsapp-link` and the QR code box on contact.html and blog.html.
+- Placeholders to replace: links `#software-page`, `#stripe-monthly-pass`, `#stripe-fleet-pass`, `#stripe-dashboard` in pricing.html; `#whatsapp-link` and the QR code box on contact.html and blog.html.
+- Sample report: put the PDF at `assets/reports/zero-detention-sample-report.pdf` (linked from the two "Download sample report" buttons on the home page).
 - Blog has no posts yet; a post-card template is commented in blog.html.
 - Home page still loads Tailwind, GSAP and Lenis from CDNs.

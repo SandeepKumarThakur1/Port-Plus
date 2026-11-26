@@ -1,5 +1,5 @@
 /* ==========================================
-   PORT PLUS — MAIN STYLESHEET
+   ZERO DETENTION — MAIN STYLESHEET
 ========================================== */
 
 :root {
@@ -1673,4 +1673,97 @@ a {
     .insight-card h3, .step h3 { font-size: 19px; }
     .insight-card p, .steps-top p, .step p { font-size: 15px; }
     .stats small { font-size: 10px; letter-spacing: 1px; }
+}
+
+/* ==========================================
+   CTA BUTTONS (hero + closing band)
+========================================== */
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: 1.5px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .25s, border-color .25s, color .25s, transform .25s;
+}
+
+.cta-btn .ic { width: 18px; height: 18px; transition: transform .25s; }
+.cta-btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.cta-btn:hover .ic { transform: translateX(3px); }
+.cta-btn.cta-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.cta-btn.cta-ghost:hover { background: var(--ink); color: #fff; }
+.cta-btn.cta-ghost:hover .ic { transform: translateY(2px); }
+.cta-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+}
+
+/* Closing CTA band */
+.cta-band { background: var(--paper); }
+
+.cta-band-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta-band .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #555;
+}
+
+.cta-band .eyebrow i { display: inline-block; width: 22px; height: 1.5px; background: var(--accent); }
+
+.cta-band h2 {
+    margin: 18px 0 14px;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+
+.cta-band h2 span { color: var(--accent); }
+
+.cta-band-copy p {
+    max-width: 470px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #777;
+}
+
+.cta-band-actions { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+    .cta-band-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 760px) {
+    .hero-section { min-height: 720px; }
+    .hero-cta { margin-top: 26px; gap: 10px; }
+    .cta-btn { font-size: 15px; padding: 12px 18px; }
+    .scroll-cue { top: 370px; }
+    .hero-note { top: 500px; }
+    .cta-band-copy p { font-size: 16px; }
 }

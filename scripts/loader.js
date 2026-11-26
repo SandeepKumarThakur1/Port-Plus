@@ -22,7 +22,7 @@
   el.className = 'pp-loader';
   el.setAttribute('role', 'status');
   el.setAttribute('aria-live', 'polite');
-  el.setAttribute('aria-label', 'Loading Port Plus');
+  el.setAttribute('aria-label', 'Loading Zero Detention');
   el.innerHTML =
     '<div class="pp-loader__panel">' +
       '<div class="pp-loader__core">' +
@@ -39,7 +39,7 @@
         '<div class="pp-loader__check" aria-hidden="true">Checking&nbsp;&nbsp;·&nbsp;&nbsp;<b>' + CHECKS[0] + '</b></div>' +
       '</div>' +
       '<div class="pp-loader__foot" aria-hidden="true">' +
-        '<span class="pp-loader__brand"><i>Port Plus&nbsp;·&nbsp;</i><b>PSC Intelligence</b></span>' +
+        '<span class="pp-loader__brand"><i>Zero Detention&nbsp;·&nbsp;</i><b>PSC Intelligence</b></span>' +
         '<span class="pct">000%</span>' +
       '</div>' +
     '</div>' +

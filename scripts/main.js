@@ -1,6 +1,6 @@
 
 // ==========================================
-// PORT PLUS — MAIN JAVASCRIPT
+// ZERO DETENTION — MAIN JAVASCRIPT
 // ==========================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     video.addEventListener("error", () => {
 
-      console.error("Unable to load Port Plus video.");
+      console.error("Unable to load Zero Detention video.");
 
       filmFrame.classList.add("video-unavailable");
 
